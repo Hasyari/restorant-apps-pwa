@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,300,700,900,100|Oswald:400,300,700|Roboto+Condensed:400,300,700|PT+Sans+Narrow:400,700|Noto+Sans:400,700|Poiret+One|Libre+Baskerville:400,700,400italic');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: 'Lato';
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.header__menu {
+  font-size: 33px;
+  margin: 10px auto;
+  display: block;
+  text-align: center;
+  min-width: 44px;
+  min-height: 44px;
+  text-decoration: none;
+}
+
+/*
+  AppBar
+*/
+ 
+.app-bar {
+  padding: 8px 16px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+ 
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+ 
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  min-width: 44px;
+  min-height: 44px;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+}
+ 
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+ 
+.app-bar .app-bar__brand h1 {
+  color: black;
+  font-size: 22px;
+  user-select: none;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: white;
+  overflow: hidden;
+}
+ 
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+ 
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  text-decoration: none;
+  color: black;
+  padding: 12px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+
+/* JUMBOTRON */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 480px;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../public/hero/hero-image_2-small.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: green;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.hero__tagline {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 340;
+}
+
+
+/*
+  Main Content
+*/
+ 
+main {
+  flex: 1;
+}
+
+
+.content {
+  padding: 32px;
+  margin: 0 auto;
+  min-height: 100%;
+}
+ 
+.content h2 {
+  text-align: center;
+}
+
+ 
+.content .content__heading {
+  font-weight: normal;
+}
+
+/*
+  Restaurants
+*/
+
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+/* MAIN CONTENT */
+main{
+  width: 100%;
+  margin: 0 auto;
+}
+.menu {
+  margin: 32px auto auto;
+  text-align: left;
+}
+.container {
+  padding: 32px;
+}
+.text-main{
+  padding: 50px 0 20px 0;
+  text-align: center;
+}
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 100%;
+}
+.card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 20px;
+}
+
+.title_card a{
+  font-size: 23px;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: #0e1318;
+  font-weight: 600;
+}
+
+.desc_card{
+  padding: 10px 10px;
+}
+
+.tag {
+  background: #cccccc;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  padding: 2px 10px;
+  cursor: pointer;
+}
+.tag-teal {
+  background-color: #47bcd4;
+}
+.tag-purple {
+  background-color: #5e76bf;
+}
+
+.card-body p {
+  font-size: 13px;
+  margin: 10px 10px 10px 0px;
+  text-align: justify;
+}
+
+.card-header span{
+  display: inline;
+  background-color: #47bcd4;
+  color: #fff;
+  padding: 10px;
+  position: absolute;
+  border-top-left-radius: 10px;
+  border-end-end-radius: 10px;
+}
+
+/* end MAIN CONTENT */
+
+/*
+  Restaurant
+*/
+
+.restaurant{
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 32px;
+}
+
+.restaurant-header {
+  grid-template-columns: 1fr;
+  display: grid;
+  margin-bottom: 20px;
+}
+
+.restaurant-header img{
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: green;
+}
+
+.restaurant-header .restaurant-header__information .name_restaurant{
+  margin-top: 13px;
+}
+
+.restaurant-header .restaurant-header__information .rating{
+  color: #f4ca0b;
+}
+
+
+.restaurant-detail .title{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.restaurant-detail p{ 
+  padding: 13px;
+  text-align: justify;
+}
+
+.restaurant-detail .menu{ 
+  padding: 12px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3px;
+}
+
+ul{
+  list-style: none;
+}
+
+.restaurant-detail .menu ul{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3px;
+  padding: 13px;
+  font-size: 15px;
+}
+
+.restaurant-detail .menu ul h3{
+  text-align: center;
+  margin: 16px;
+}
+
+.restaurant-detail .reviews span{
+  color: #929292;
+}
+
+.restaurant-detail .reviews p{
+  font-size: 22px;
+}
+
+.restaurant-item__not__found{
+  display: grid;
+  justify-content: center;
+  margin: auto;
+  border: 3px solid red;
+  border-radius: 13px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/*
+  Footer
+*/
+
+footer{
+  position: block;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+  text-align: center;
+  background-color: #002a38;
+}
+footer p{
+  padding-top: 2%;
+  font-weight: 600;
+}
+
+footer p a {
+  color: #db0000;
+  text-decoration: none;
+}
+
+/* SKIP CONTENT LINK */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
