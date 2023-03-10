@@ -1,10 +1,11 @@
 /* eslint-disable max-len */
 import RestaurantSource from '../../data/restaurantdb-source';
-import {createRestaurantItem} from '../templates/template-creator';
+import {createRestaurantItem, spinnerLoader} from '../templates/template-creator';
 
 const Home = {
   async render() {
     return `
+      ${document.querySelector('main').innerHTML = spinnerLoader.show()}
       <div class="hero">
         <div class="hero__inner">
           <div class="hero__title">
@@ -28,6 +29,7 @@ const Home = {
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML += createRestaurantItem(restaurant);
     });
+    spinnerLoader.remove();
   },
 };
 

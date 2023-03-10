@@ -94,10 +94,20 @@ const createUnikeRestaurantButtonTemplate = () => `
   </button>
 `;
 
+const spinnerLoader = {
+  show() {
+    return `<span class="loader"></span>`;
+  },
+  remove() {
+    document.querySelector('.loader').remove();
+  },
+};
+
 export {
   createRestaurantItem,
   createRestaurantDetailTemplate,
   createLikeRestaurantButtonTemplate,
   createUnikeRestaurantButtonTemplate,
+  spinnerLoader,
 };
 
